@@ -1,0 +1,20 @@
+using System;
+
+// Перевести секунды в часы, минуты и секунды, не использовать деление с остатком
+class Seconds {
+    public static void Main() {
+        int n;
+        string seconds, minutes, hours;
+        int m = 60;
+        int h = 60*m;
+        
+        n = Convert.ToInt32(Console.ReadLine());
+        hours = (n/h).ToString();
+        n = n-Convert.ToInt32(hours)*h;
+        minutes = (n/m).ToString();
+        n = n-Convert.ToInt32(minutes)*m;
+        seconds = n.ToString();
+        
+        Console.WriteLine(string.Format("{0}:{1}:{2}", hours, minutes, seconds));
+    }
+}
